@@ -1,0 +1,51 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnail cache files
+._*
+
+# Files that might appear in external disks
+.Spotlight-V100
+.Trashes
+
+# Node-related (if using build tools like npm/gulp)
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# Composer vendor folder (if using Composer in your theme)
+vendor/
+
+# Sass/SCSS cache
+.sass-cache/
+*.css.map
+
+# PHPStorm / VSCode / Sublime / Other editor folders
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Log files
+*.log
+
+# WordPress core files (if this is a theme repo only)
+wp-admin/
+wp-includes/
+license.txt
+readme.html
+
+# Backup files
+*.bak
+*.tmp
+*.swp
+*~
+
+# Ignore uploads (if mistakenly inside theme dir)
+uploads/
+media/
+*.zip
