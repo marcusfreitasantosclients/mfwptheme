@@ -1,0 +1,25 @@
+.mf_dynamic_carousel_item_img_wrapper img {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 2px solid var(--primary_color_light);
+}
+
+.mf_dynamic_carousel_item h3 {
+  font-family: "Lato-Regular";
+  font-size: var(--font-size-xl);
+  color: var(--text_color);
+  text-transform: uppercase;
+}
+
+.mf_dynamic_carousel_item p {
+  font-family: "Lato-Light";
+  font-size: var(--font-size-base);
+  color: var(--text_color);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

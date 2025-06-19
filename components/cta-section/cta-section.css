@@ -1,0 +1,25 @@
+.mf_cta_section_img_wrapper {
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mf_cta_section_img_wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mf_cta_section .row {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 60rem) {
+  .mf_cta_section_img_wrapper {
+    height: 350px;
+  }
+}

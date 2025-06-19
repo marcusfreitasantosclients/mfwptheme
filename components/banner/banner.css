@@ -1,0 +1,29 @@
+.mf_banner {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mf_banner h2 {
+  font-family: "Lato-Regular";
+  font-size: var(--font-size-3xl);
+}
+
+.mf_banner p {
+  font-family: "Lato-Light";
+  font-size: var(--font-size-2xl);
+}
+
+.mf_banner .splide__track {
+  height: 600px !important;
+  width: 100%;
+}
+
+.mf_banner .splide__arrow {
+  background: none;
+}
+
+.mf_banner .splide__arrow svg {
+  fill: var(--light_gray_color);
+}

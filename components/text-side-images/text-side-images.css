@@ -1,0 +1,14 @@
+.mf_text_side_images_image_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--default-input-border-radius);
+  overflow: hidden;
+  width: 100%;
+}
+
+.mf_text_side_images_image_wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

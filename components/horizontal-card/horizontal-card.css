@@ -1,0 +1,30 @@
+.mf_horizontal_card_img_wrapper {
+  border-radius: var(--default-input-border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+.mf_horizontal_card_img_wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mf_horizontal_card_content_wrapper {
+  border-radius: var(--default-input-border-radius);
+  padding: 40px;
+  background-color: var(--primary_color_light);
+}
+
+.mf_horizontal_card_content_wrapper h2 {
+  font-family: "Lato-Regular";
+  font-size: var(--font-size-2xl);
+  color: var(--primary_color_dark);
+}
+
+.mf_horizontal_card_content {
+  font-family: "Lato-Light";
+}

@@ -1,0 +1,230 @@
+/*
+Theme Name: MF WP Theme
+Author: Marcus Freitas
+Author URI: https://mafreitas.com.br
+Description: A custom WordPress theme
+Version: 1.0
+*/
+
+@font-face {
+  font-family: "Lato-Thin";
+  src: url(./assets/fonts/Lato-Thin.ttf);
+}
+
+@font-face {
+  font-family: "Lato-Light";
+  src: url(./assets/fonts/Lato-Light.ttf);
+}
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: url(./assets/fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Lato-Bold";
+  src: url(./assets/fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Lato-Black";
+  src: url(./assets/fonts/Lato-Black.ttf);
+}
+
+:root {
+  /* Colors */
+  --primary_color: #2b3a4d;
+  --primary_color_light: #dce5e4;
+  --primary_color_dark: #18202b;
+
+  --secondary_color: #c4b3a5;
+  --light_gray_color: #f1f1f1;
+  --text_color: #2b2f32;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-md: 1.125rem; /* 18px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-xl: 1.5rem; /* 24px */
+  --font-size-2xl: 2rem; /* 32px */
+  --font-size-3xl: 3rem; /* 48px */
+
+  --default-input-border-radius: 12px;
+}
+
+body {
+  font-family: "Lato-Light";
+  color: var(--text_color);
+}
+
+.bg-primary {
+  background-color: var(--primary_color) !important;
+}
+
+a {
+  transition: 0.5s !important;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.input-group,
+.wc-block-components-text-input input {
+  border-radius: var(--default-input-border-radius) !important;
+  padding: 6px 12px;
+  background-color: var(--primary_color_light) !important;
+}
+
+.form-control,
+.woocommerce-Input,
+.wc-blocks-components-select__select {
+  border-radius: var(--default-input-border-radius) !important;
+  padding: 12px !important;
+  background-color: var(--primary_color_light) !important;
+}
+
+input {
+  border: none !important;
+  background: none !important;
+  background-color: transparent !important;
+  border-radius: var(--default-input-border-radius);
+  margin-right: 6px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: 1px solid var(--secondary_color) !important;
+  background: none !important;
+  background-color: transparent !important;
+  border-radius: var(--default-input-border-radius);
+}
+
+select {
+  padding: 12px !important;
+  border-radius: 50px !important;
+  border-color: var(--primary_color_light) !important;
+}
+
+/* WOO */
+.woocommerce form.login {
+  border: 1px solid var(--light_gray_color);
+  border-radius: var(--default-input-border-radius);
+}
+
+.woocommerce form.login a,
+.woocommerce form.login h2 {
+  color: var(--primary_color);
+}
+
+.woocommerce-MyAccount-content {
+  float: none;
+  width: 100% !important;
+}
+
+/* WOO CART */
+.wc-block-components-sidebar-layout {
+  gap: 12px;
+}
+
+.wc-block-components-main,
+.wc-block-components-sidebar {
+  padding: 24px !important;
+  border-radius: 24px !important;
+  border: 1px solid var(--primary_color_light) !important;
+  width: 50%;
+  margin: 0 !important;
+}
+
+.wc-block-components-main {
+  width: 60% !important;
+}
+
+.wp-block-woocommerce-cart-line-items-block img {
+  border-radius: var(--default-input-border-radius);
+}
+
+.wp-block-woocommerce-cart-line-items-block a {
+  text-decoration: none;
+  color: var(--text_color);
+}
+
+.wp-block-woocommerce-cart {
+  padding: 60px 0;
+}
+.wc-block-components-product-name {
+  font-family: "Lato-Bold";
+  color: var(--primary_color);
+}
+
+.wc-block-cart-items__header-image {
+  padding: 12px !important;
+}
+
+.wc-block-cart__submit-container a,
+.wc-block-components-button {
+  text-decoration: none;
+  border-radius: 50px !important;
+  padding: 8px var(--font-size-xl);
+  background: var(--primary_color);
+  background-color: var(--primary_color) !important;
+  border-color: var(--primary_color);
+  color: white;
+}
+
+.wp-block-woocommerce-checkout-order-summary-block {
+  border: none !important;
+}
+
+/* WOO CHECKOUT */
+.wc-block-components-address-form__country {
+  display: none;
+}
+
+/* GALLERY */
+.mf_gallery_container {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.mf_gallery_container_img_wrapper {
+  height: 400px;
+}
+
+.mf_gallery_img_wrapper {
+  height: 300px;
+  width: 100%;
+}
+
+.mf_gallery_img_wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.mf_gallery_featured_img_wrapper {
+  border-radius: 24px;
+  overflow: hidden;
+  max-height: 600px;
+}
+
+.mf_gallery_featured_img_wrapper img {
+  width: 120%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.mf_gallery_featured_img_wrapper img:hover {
+  transform: translateX(-10px);
+}
+
+@media (max-width: 60rem) {
+  .mf_gallery_container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mf_gallery_container_img_wrapper {
+    height: 200px;
+  }
+}

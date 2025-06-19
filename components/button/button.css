@@ -1,0 +1,19 @@
+.mf_default_btn {
+  border-radius: 50px !important;
+  padding: 8px var(--font-size-xl);
+  border-color: var(--primary_color) !important;
+}
+
+.mf_default_btn.btn-primary.bg-dark {
+  background: var(--primary_color);
+  background-color: var(--primary_color) !important;
+  border-color: var(--primary_color);
+}
+
+.mf_default_btn.btn-secondary {
+  background: none;
+  background-color: transparent;
+  border-color: var(--primary_color) !important;
+  outline-color: var(--primary_color) !important;
+  color: var(--primary_color);
+}

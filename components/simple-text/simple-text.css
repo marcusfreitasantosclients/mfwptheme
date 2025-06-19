@@ -1,0 +1,10 @@
+.mf_simple_text h2 {
+  font-family: "Lato-Regular";
+  color: var(--primary_color);
+}
+
+.mf_simple_text p {
+  font-family: "Lato-Light";
+  font-size: var(--font-size-base);
+  color: var(--primary_color);
+}

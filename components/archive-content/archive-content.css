@@ -1,0 +1,21 @@
+.filter_content_column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px;
+  background-color: white;
+  border: 1px solid var(--light_gray_color);
+  border-radius: var(--default-input-border-radius);
+  text-decoration: none;
+}
+
+.filter_content_column label {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.filter_content_column label.parent {
+  font-family: "Lato-Regular";
+}

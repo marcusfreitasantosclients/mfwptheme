@@ -1,0 +1,28 @@
+.mf_footer h5 {
+  font-family: "Lato-Light" !important;
+  text-transform: uppercase !important;
+}
+
+.mf_footer a,
+.mf_footer p {
+  color: var(--text_color);
+  padding-top: 12px;
+  border-top: 1px solid var(--secondary_color);
+  width: 100%;
+  display: block;
+  font-family: "Lato-Light";
+}
+
+.mf_footer .social__links ul li a {
+  border: none;
+  background-color: var(--primary_color_light);
+  padding: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: var(--font-size-lg);
+}

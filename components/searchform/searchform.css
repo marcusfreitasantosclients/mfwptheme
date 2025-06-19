@@ -1,0 +1,10 @@
+.searchform input:focus-visible {
+  outline: 0 !important;
+  background: none !important;
+  background-color: transparent !important;
+  border-radius: var(--default-input-border-radius);
+}
+
+.searchform .input-group {
+  border-radius: 50px !important;
+}

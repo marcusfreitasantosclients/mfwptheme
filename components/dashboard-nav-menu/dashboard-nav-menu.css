@@ -1,0 +1,8 @@
+.mf_dashboard_nav_menu {
+  border: 1px solid var(--primary_color_light) !important;
+}
+
+.mf_dashboard_nav_menu i {
+  color: var(--primary_color_dark);
+  font-size: var(--font-size-xl);
+}
