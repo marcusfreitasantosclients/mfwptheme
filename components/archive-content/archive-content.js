@@ -1,8 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const currentDesigner =
-    document.querySelector(".filter_content_column").dataset.currentDesigner ??
-    null;
-  console.log(currentDesigner);
   const submitBtn = document.querySelector(
     ".filter_content_column .mf_default_btn"
   );
@@ -74,15 +70,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  submitBtn.addEventListener("click", function (e) {
+  submitBtn?.addEventListener("click", function (e) {
     e.preventDefault();
     getPosts();
   });
 
-  loadMoreBtn.addEventListener("click", function () {
+  loadMoreBtn?.addEventListener("click", function () {
     currentPage++;
     getPosts(currentPage, true);
   });
-
-  if (currentDesigner) getPosts();
 });

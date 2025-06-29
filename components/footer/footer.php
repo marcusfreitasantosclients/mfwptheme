@@ -83,7 +83,7 @@ function mf_footer() {
                         </a>
                     <?php } ?>
 
-                    <ul class="list-unstyled d-flex flex-row align-items-center gap-2 mt-3">
+                    <ul class="list-unstyled d-flex flex-row flex-wrap align-items-center gap-2 mt-3">
                         <?php foreach($social_links as $key => $link) { ?>
                             <?php if(isset($link) && $link !== "") { ?>
                                 <li>

@@ -3,11 +3,6 @@
     $product_brands = get_product_brands(); 
     $queried_object = get_queried_object();
     $queried_object_name = $queried_object->name;
-    
-    if(isset($_GET['designer_id'])){
-        $designer = get_post($_GET['designer_id']);
-        $queried_object_name = trim($designer->post_title);
-    }
 
     function render_category_checkboxes($categories, $parent = 0, $depth = 0, $queried_object_name = '') {
         foreach ($categories as $category) {

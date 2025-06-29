@@ -55,32 +55,41 @@ function menus_setup() {
 add_action( 'after_setup_theme', 'menus_setup' );
 
 
+function enqueue_all_component_assets() {
+    global $version;
+    $components_dir = THEME_DIR . '/components/';
+    $components_url = THEME_URL . '/components/';
+    if (is_dir($components_dir)) {
+        foreach (scandir($components_dir) as $component_name) {
+            if ($component_name === '.' || $component_name === '..') continue;
+            $component_path = $components_dir . $component_name;
+            if (is_dir($component_path)) {
+                $css = $component_path . '/' . $component_name . '.css';
+                $js  = $component_path . '/' . $component_name . '.js';
+                if (file_exists($css)) {
+                    wp_enqueue_style('component-' . $component_name, $components_url . $component_name . '/' . $component_name . '.css', [], $version);
+                }
+                if (file_exists($js)) {
+                    wp_enqueue_script('component-' . $component_name, $components_url . $component_name . '/' . $component_name . '.js', [], $version, true);
+                }
+            }
+        }
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_all_component_assets');
+
+
 //Import files components
 function import_component($component_name, $component_data) {
-    global $version;
     $component_path = THEME_DIR . '/components/' . $component_name;
     $component_render = 'mf_' . $component_name;
 
-    if (is_dir($component_path)) {  
-        // Enqueue CSS
-        $component_css = THEME_DIR . '/components/'.$component_name.'/'.$component_name.'.css';
-        if (file_exists($component_css)) {
-            wp_enqueue_style('component-' . $component_css, THEME_URL .'/components/'.$component_name.'/'.$component_name.'.css', [], $version);
-        }
-
-        // Enqueue JS
-        $component_js = THEME_DIR . '/components/'.$component_name.'/'.$component_name.'.js';
-        if (file_exists($component_js)) {
-            wp_enqueue_script('component-' . $component_js, THEME_URL .'/components/'.$component_name.'/'.$component_name.'.js', [], $version, true);
-        }
-
-        // Enqueue PHP
-        $component_php = THEME_DIR . '/components/'.$component_name.'/'.$component_name.'.php';
-        if (file_exists($component_php)) {            
+    if (is_dir($component_path)) {
+        $component_php = $component_path . '/' . $component_name . '.php';
+        if (file_exists($component_php)) {
             include_once($component_php);
             $component_render = str_replace('-', '_', $component_render);
-            
-            if(function_exists($component_render)) echo $component_render($component_data[$component_name]);
+            if (function_exists($component_render)) echo $component_render($component_data[$component_name]);
         }
     }
 }
