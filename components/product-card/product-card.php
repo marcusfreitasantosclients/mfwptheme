@@ -30,9 +30,11 @@ function mf_product_card($component_data){
                 </h3>
 
                 <div class="d-flex flex-column align-items-end">
-                    <span class="mf_product_card_price_text">
-                        Starting at 
-                    </span>
+                    <?php if($product->is_type('variable')){ ?>
+                        <span class="mf_product_card_price_text">
+                            Starting at 
+                        </span>
+                    <?php } ?>
                     <span class="mf_product_card_price">
                         <?= $price_display ?>
                     </span>

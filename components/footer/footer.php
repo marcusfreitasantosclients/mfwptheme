@@ -97,15 +97,14 @@ function mf_footer() {
                 </div>
             </div>
         </div>
-
-
-        <div class="py-3">
-            <div class="container text-center">
-                <hr />
-                <span class="" style="margin: 0;">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. Todos os direitos reservados.</span>
-            </div>
-        </div>
     </footer>
+    
+    <div class="py-3">
+        <div class="text-center">
+            <hr />
+            <span class="" style="margin: 0;">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. Todos os direitos reservados.</span>
+        </div>
+    </div>
 
     <?php 
     if(isset($whatsapp_msg) && $whatsapp_msg !== "") {

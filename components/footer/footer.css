@@ -7,7 +7,7 @@
 .mf_footer p {
   color: var(--text_color);
   padding-top: 12px;
-  border-top: 1px solid var(--secondary_color);
+  border-top: var(--default-border-style);
   width: 100%;
   display: block;
   font-family: "Lato-Light";

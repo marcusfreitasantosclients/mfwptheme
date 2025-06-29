@@ -10,7 +10,6 @@ function mf_single_product($component_data){
     $product_brand_terms = wp_get_post_terms($product->get_id(), 'product_brand');
     $product_cats = implode(', ', wp_list_pluck($product_category_terms, 'name'));    
     $product_brands = implode(', ', wp_list_pluck($product_brand_terms, 'name')); 
-    $product_featured_img = get_the_post_thumbnail($product->id, 'full');
     $attachment_ids = $product->get_gallery_image_ids();
 
     // Get 10 most recent product IDs in date descending order.
@@ -129,7 +128,5 @@ function mf_single_product($component_data){
                 </div>
             </div>
         </div>
-
-        
     </section>
 <?php }

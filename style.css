@@ -52,6 +52,7 @@ Version: 1.0
   --font-size-3xl: 3rem; /* 48px */
 
   --default-input-border-radius: 12px;
+  --default-border-style: 1px solid #f1f1f1;
 }
 
 body {
