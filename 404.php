@@ -21,9 +21,11 @@
         ]);
         ?>
 
-      <div class="mt-4">
-        <?php import_component('searchform', ['searchform' => []]); ?>
-
+      <div class="row justify-content-center">
+        <div class="mt-4 col-md-4">
+          <?php import_component('searchform', ['searchform' => []]); ?>
+        </div>
+        </div>
       </div>
     </div>
   </div>

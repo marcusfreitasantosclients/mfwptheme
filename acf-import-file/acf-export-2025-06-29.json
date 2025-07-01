@@ -172,30 +172,6 @@
                 "min": "",
                 "max": "",
                 "return_format": "id"
-            },
-            {
-                "key": "field_673a015841aa3",
-                "label": "Dynamic Content",
-                "name": "dynamic_content",
-                "type": "checkbox",
-                "instructions": "Mark the content types that this popup should appear.",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "choices": {
-                    "designer": "Designers",
-                    "product": "Product"
-                },
-                "allow_custom": 0,
-                "default_value": [],
-                "layout": "vertical",
-                "toggle": 0,
-                "return_format": "value",
-                "save_custom": 0
             }
         ],
         "location": [
@@ -235,31 +211,6 @@
         "key": "group_681d52bd8f56d",
         "title": "Product fields",
         "fields": [
-            {
-                "key": "field_681d52cf03460",
-                "label": "Designers",
-                "name": "designers",
-                "type": "relationship",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "post_type": [
-                    "designer"
-                ],
-                "taxonomy": "",
-                "filters": [
-                    "search"
-                ],
-                "elements": "",
-                "min": "",
-                "max": "",
-                "return_format": "id"
-            },
             {
                 "key": "field_681f5407182e1",
                 "label": "Banner field",
@@ -350,7 +301,8 @@
                             "dynamic-carousel": "Carousel of dynamic content",
                             "cta-section": "CTA section",
                             "text-with-image-cards": "Text with Image Cards",
-                            "contact-form": "Contact Form"
+                            "contact-form": "Contact Form",
+                            "products-gallery": "Product Gallery"
                         },
                         "default_value": false,
                         "allow_null": 0,
@@ -1757,6 +1709,59 @@
                                         "append": ""
                                     }
                                 ]
+                            }
+                        ]
+                    },
+                    {
+                        "key": "field_68614846aa8bc",
+                        "label": "Products Gallery",
+                        "name": "products-gallery",
+                        "type": "group",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_67f5e2a9889d6",
+                                    "operator": "==",
+                                    "value": "products-gallery"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "layout": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_68614870aa8bd",
+                                "label": "Lista de produtos",
+                                "name": "product_list",
+                                "type": "relationship",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "post_type": [
+                                    "product"
+                                ],
+                                "taxonomy": "",
+                                "filters": [
+                                    "search",
+                                    "taxonomy"
+                                ],
+                                "elements": [
+                                    "featured_image"
+                                ],
+                                "min": 2,
+                                "max": "",
+                                "return_format": "id"
                             }
                         ]
                     }
