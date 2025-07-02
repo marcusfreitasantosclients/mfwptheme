@@ -394,9 +394,4 @@ function concat_target_emails($target_emails){
   return empty($target_emails_addresses) ? $site_email : $target_emails_addresses;
 }
 
-function cart_empty_shortcode(){
-  import_component("cart-empty", []);
-}
-add_shortcode("custom-cart-empty", "cart_empty_shortcode");
-
 ?>
